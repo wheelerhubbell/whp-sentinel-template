@@ -1,0 +1,30 @@
+name: Decision Integrity Audit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+    inputs:
+      claim:
+        description: 'Specific claim to verify'
+        required: false
+        default: 'Automated CI build integrity check'
+
+jobs:
+  epistemic-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Run WHP Standing Gate
+        uses: wheelerhubbell/standing-gate@v0
+        with:
+          subject: ${{ github.repository }}@${{ github.sha }}
+          claim: ${{ github.event.inputs.claim || 'Repository commit integrity validated under declared provenance' }}
+          provenance: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
+          mock: 'true' # Set to 'false' and provide WHP_PAYMENT_KEY secret for live signed Base settlement
+        env:
+          WHP_PAYMENT_KEY: ${{ secrets.WHP_PAYMENT_KEY }}
