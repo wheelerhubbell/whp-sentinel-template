@@ -22,10 +22,12 @@ async function main() {
   };
 
   const headers = { 'Content-Type': 'application/json' };
-  if (!isLive) {
+  if (process.env.WHP_PAYMENT_KEY || process.env.WHP_PAYMENT) {
+    const key = process.env.WHP_PAYMENT_KEY || process.env.WHP_PAYMENT;
+    headers['Authorization'] = key.startsWith('Bearer ') ? key : `Bearer ${key}`;
+    headers['PAYMENT-SIGNATURE'] = key;
+  } else if (!isLive) {
     headers['X-Mock'] = 'true';
-  } else if (process.env.WHP_PAYMENT_KEY) {
-    headers['X-Payment-Key'] = process.env.WHP_PAYMENT_KEY;
   }
 
   try {
