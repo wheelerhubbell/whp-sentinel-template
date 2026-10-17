@@ -25,6 +25,8 @@ jobs:
           subject: ${{ github.repository }}@${{ github.sha }}
           claim: ${{ github.event.inputs.claim || 'Repository commit integrity validated under declared provenance' }}
           provenance: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
-          mock: 'true' # Set to 'false' and provide WHP_PAYMENT_KEY secret for live signed Base settlement
+          mock: 'false'
+          buyer_key: ${{ secrets.WHP_BUYER_KEY || secrets.WHP_PAYMENT_KEY }}
         env:
-          WHP_PAYMENT_KEY: ${{ secrets.WHP_PAYMENT_KEY }}
+          WHP_BUYER_KEY: ${{ secrets.WHP_BUYER_KEY || secrets.WHP_PAYMENT_KEY }}
+          WHP_PAYMENT_KEY: ${{ secrets.WHP_BUYER_KEY || secrets.WHP_PAYMENT_KEY }}
