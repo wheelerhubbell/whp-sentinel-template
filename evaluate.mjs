@@ -4,7 +4,7 @@
  * Evaluates claims against Wheeler Hubbell Publishing runtime.
  */
 
-const WHP_URL = process.env.WHP_URL || 'https://standing-guard-service.lovable.app';
+const WHP_URL = process.env.WHP_URL || 'https://api.wheelerhubbellpublishing.com';
 const args = process.argv.slice(2);
 const isLive = args.includes('--live');
 const claimIndex = args.indexOf('--claim');
