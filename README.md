@@ -6,12 +6,12 @@ This repository is a starter template for teams building AI agents, autonomous p
 
 The canonical architecture is:
 
-- Wheeler Hubbell Publishing — the public brand and research layer
-- Decision Integrity Protocol — the governing framework and ruleset
-- Unilateral Integrity — the doctrine that a claim or action may not exceed the authority and provenance that justify it
-- Standing Mark Service — the operational evaluation runtime
-- Standing Gate — the enforcement layer for CI/CD and automated execution
-- Standing Mark / Standing Assessment — the issued outcomes
+- Wheeler Hubbell Publishing — public brand and research layer
+- Decision Integrity Protocol — governing framework and ruleset
+- Unilateral Integrity — principle that a claim or action may not exceed the authority and provenance that justify it
+- Standing Mark Service — operational evaluation runtime
+- Standing Gate — enforcement layer for CI/CD and automated execution
+- Standing Mark / Standing Assessment — issued outcomes
 
 ## What This Template Does
 
@@ -43,7 +43,7 @@ WHP_PAYMENT_KEY=0x... node evaluate.mjs --live --claim "Deploying treasury rebal
 
 ## Canonical Terminology
 
-Use the following phrases consistently:
+Use these terms consistently:
 
 - Brand: Wheeler Hubbell Publishing
 - Framework: Decision Integrity Protocol
@@ -64,7 +64,7 @@ A Standing Mark is issued only when the claim is genuinely established under the
 ## Powered By
 
 - Brand: [Wheeler Hubbell Publishing](https://wheelerhubbell.github.io)
-- Protocol: Decision Integrity Protocol
+- Framework: Decision Integrity Protocol
 - Runtime: Standing Mark Service
 - Enforcement: Standing Gate
 - Client library: `@wheelerhubbell/whp-standing-client`
