@@ -1,63 +1,74 @@
 # WHP Sentinel Template
 
-> **Decision Integrity Protocol**
-> **Standing Mark Service**
-> **Unilateral Integrity**
+> Plug-and-play template for the Decision Integrity Protocol, the Standing Mark Service, and CI/CD enforcement via Standing Gate.
 
-`whp-sentinel-template` is the enforcement layer for the Wheeler Hubbell Publishing Decision Integrity Protocol. It operationalizes Unilateral Integrity in repo workflows by requiring claims, agent actions, and critical steps to establish standing before they are accepted.
+This repository is a starter template for teams building AI agents, autonomous pipelines, and critical software systems. It enables projects to integrate with Wheeler Hubbell Publishing's Decision Integrity Protocol and the Standing Mark Service without re-implementing the operational pattern from scratch.
 
-This repository is the adoption path for teams and autonomous systems that want to plug the Standing Mark Service into GitHub workflows, CI/CD pipelines, and agent execution environments.
+The canonical architecture is:
 
-## Unified architecture
+- Wheeler Hubbell Publishing — the public brand and research layer
+- Decision Integrity Protocol — the governing framework and ruleset
+- Unilateral Integrity — the doctrine that a claim or action may not exceed the authority and provenance that justify it
+- Standing Mark Service — the operational evaluation runtime
+- Standing Gate — the enforcement layer for CI/CD and automated execution
+- Standing Mark / Standing Assessment — the issued outcomes
 
-- Public identity and standards: `wheelerhubbell.github.io`
-- Runtime service: `standing-gate`
-- Enforcement template: `whp-sentinel-template`
-- Agent tooling integration: `agentkit`
+## What This Template Does
 
-The template is not a separate product. It is the easiest way to consume the same service in a repository environment.
-
-## What this template does
-
-Autonomous agents and automated pipelines make claims, execute commands, and trigger irreversible actions. This template enforces decision integrity before those actions are accepted.
+Autonomous agents and automated workflows often make claims without sufficient grounding. This template gives you a ready-made integration point for enforcing decision integrity before irreversible actions proceed.
 
 It provides:
 
-1. epistemic auditing of claims and assertions
-2. fail-closed gate behavior for critical actions
-3. verifiable receipts from the Standing Mark Service
-4. a default pattern for repo enforcement and agent governance
-
-## Service relationship
-
-The Decision Integrity Protocol defines the standard.
-The Standing Mark Service performs the verification.
-The Sentinel Template is the operational wrapper that embeds that standard into real repositories.
-
-This is the clean, unified architecture for the service ecosystem.
+1. A repository-level gate for claim evaluation and CI/CD enforcement
+2. A dry-run path for structural validation without payment
+3. A live evaluation path for paid protocol execution through the Standing Mark Service
+4. A clean pattern for wrapping autonomous actions with fail-closed checks
 
 ## Quickstart
 
-1. Use this template to create a repo or workflow integration.
-2. Run the included GitHub Action automatically on push or pull request.
-3. Default mode is zero-cost structural validation.
-4. Add live verification when you are ready to submit signed claims for standing.
+1. Click "Use this template" to create a project from this repository.
+2. The included GitHub Action will run automatically on push or pull request.
+3. By default, the workflow runs in structural dry-run mode for zero-cost validation.
+4. When you are ready for live evaluation, add your repository secret and proceed under the published Decision Integrity Protocol.
 
-## Standard tiers
+## Manual Evaluation via CLI
 
-| Epistemic object | Scope | Live verification path |
-| :--- | :--- | :--- |
-| Proposition | single atomic assertion | `/v1/ping` |
-| Claim | bounded proposition with evidence and source | `/v1/evaluate` |
-| Qualification Update | delta or amendment to standing | `/v1/patch` |
-| Evidence Graph | multi-source evaluation | `/v1/audit` |
-| Dossier | comprehensive, mission-critical review | `/v1/evaluations` |
+```bash
+# Structural Dry Run — zero cost
+node evaluate.mjs --claim "Agent release conforms to specification"
 
-## Powered by
+# Live Evaluation — paid under the Decision Integrity Protocol
+WHP_PAYMENT_KEY=0x... node evaluate.mjs --live --claim "Deploying treasury rebalance"
+```
 
-- Engine: [Wheeler Hubbell Publishing](https://wheelerhubbell.github.io)
-- Runtime: [`wheelerhubbell/standing-gate@v0`](https://github.com/wheelerhubbell/standing-gate)
+## Canonical Terminology
+
+Use the following phrases consistently:
+
+- Brand: Wheeler Hubbell Publishing
+- Framework: Decision Integrity Protocol
+- Principle: Unilateral Integrity
+- Runtime: Standing Mark Service
+- Enforcement: Standing Gate
+- Positive outcome: Standing Mark
+- Negative outcome: Standing Assessment
+- Free validation: Structural Dry Run
+- Paid evaluation: Live Evaluation
+
+## Pricing and Terms
+
+Pricing is workload-based and outcome-independent. Payment buys evaluation under published rules, not a favorable outcome.
+
+A Standing Mark is issued only when the claim is genuinely established under the protocol. A Standing Assessment is issued when the claim exceeds its authority, evidence, or admissible provenance.
+
+## Powered By
+
+- Brand: [Wheeler Hubbell Publishing](https://wheelerhubbell.github.io)
+- Protocol: Decision Integrity Protocol
+- Runtime: Standing Mark Service
+- Enforcement: Standing Gate
 - Client library: `@wheelerhubbell/whp-standing-client`
 
-The Sentinel Template is the repo-level enforcement layer for a single service ecosystem: Decision Integrity Protocol + Standing Mark Service + Unilateral Integrity.
+## Summary
 
+This template is the adoption layer for the Decision Integrity Protocol. It brings the public research, the protocol, the live evaluation runtime, and the enforcement gate into a clean, repo-ready workflow for automated systems.
