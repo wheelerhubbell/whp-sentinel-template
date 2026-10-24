@@ -1,59 +1,63 @@
 # WHP Sentinel Template
 
-> **Automated Decision Integrity & Claim Auditing for Autonomous Agents and CI/CD**
+> **Decision Integrity Protocol**
+> **Standing Mark Service**
+> **Unilateral Integrity**
 
-This repository is a plug-and-play template for teams building AI agents, autonomous pipelines, and critical software systems. It integrates Wheeler Hubbell Publishing's **Decision Integrity Engine** and **Standing Gate** directly into your repository.
+`whp-sentinel-template` is the enforcement layer for the Wheeler Hubbell Publishing Decision Integrity Protocol. It operationalizes Unilateral Integrity in repo workflows by requiring claims, agent actions, and critical steps to establish standing before they are accepted.
 
----
+This repository is the adoption path for teams and autonomous systems that want to plug the Standing Mark Service into GitHub workflows, CI/CD pipelines, and agent execution environments.
 
-## What This Does
+## Unified architecture
 
-Autonomous agents make assertions, commit code, and trigger financial or operational workflows. This template enforces **epistemic standing and claim verification** before actions are accepted:
+- Public identity and standards: `wheelerhubbell.github.io`
+- Runtime service: `standing-gate`
+- Enforcement template: `whp-sentinel-template`
+- Agent tooling integration: `agentkit`
 
-1. **Epistemic Auditing:** Evaluates whether propositions, claims, and actions are grounded in valid authority, admissible sources, and bounded scope.
-2. **Circuit Breaker Gate:** Halts hallucinated or unverified automated agent steps before they execute irreversible changes.
-3. **Verifiable Receipts:** Verifies Ed25519-signed Standing Marks (`ESTABLISHED`) or paid baseline assessments (`NOT_ESTABLISHED`).
+The template is not a separate product. It is the easiest way to consume the same service in a repository environment.
 
----
+## What this template does
 
-## Quickstart (30 Seconds)
+Autonomous agents and automated pipelines make claims, execute commands, and trigger irreversible actions. This template enforces decision integrity before those actions are accepted.
 
-1. Click **"Use this template"** above to create your own copy.
-2. The included GitHub Action (`.github/workflows/decision-integrity.yml`) will run automatically on push or pull request.
-3. By default, it runs in **Dry-Run Mode (`mock: 'true'`)** at zero cost.
-4. When you are ready for cryptographically signed, paid live verification on Base (x402 USDC), add your EVM private key as a repository secret: `WHP_PAYMENT_KEY`.
+It provides:
 
----
+1. epistemic auditing of claims and assertions
+2. fail-closed gate behavior for critical actions
+3. verifiable receipts from the Standing Mark Service
+4. a default pattern for repo enforcement and agent governance
 
-## Manual Verification via CLI
+## Service relationship
 
-You can evaluate any claim or agent output locally or in your scripts:
+The Decision Integrity Protocol defines the standard.
+The Standing Mark Service performs the verification.
+The Sentinel Template is the operational wrapper that embeds that standard into real repositories.
 
-```bash
-# Dry run check (zero cost)
-node evaluate.mjs --claim "Agent release conforms to specification"
+This is the clean, unified architecture for the service ecosystem.
 
-# Live paid check (settles 1 USDC on Base via x402)
-WHP_PAYMENT_KEY=0x... node evaluate.mjs --live --claim "Deploying treasury rebalance"
-```
+## Quickstart
 
----
+1. Use this template to create a repo or workflow integration.
+2. Run the included GitHub Action automatically on push or pull request.
+3. Default mode is zero-cost structural validation.
+4. Add live verification when you are ready to submit signed claims for standing.
 
-## Standard Tiers
+## Standard tiers
 
-| Epistemic Object | Scope | Live Verification Path |
+| Epistemic object | Scope | Live verification path |
 | :--- | :--- | :--- |
-| **Proposition** | Single atomic assertion / sanity check | `/v1/ping` |
-| **Claim** | Bounded proposition with cited evidence & source | `/v1/evaluate` |
-| **Qualification Update** | Delta or amendment on active standing | `/v1/patch` |
-| **Evidence Graph** | Multi-source topological evaluation | `/v1/audit` |
-| **Dossier** | Exhaustive regulatory / mission-critical audit | `/v1/evaluations` |
+| Proposition | single atomic assertion | `/v1/ping` |
+| Claim | bounded proposition with evidence and source | `/v1/evaluate` |
+| Qualification Update | delta or amendment to standing | `/v1/patch` |
+| Evidence Graph | multi-source evaluation | `/v1/audit` |
+| Dossier | comprehensive, mission-critical review | `/v1/evaluations` |
 
-*Pricing is strictly based on submitted payload and workload scope. Payment purchases rigorous evaluation under published rules—a favorable outcome (`ESTABLISHED`) cannot be bought.*
+## Powered by
 
----
+- Engine: [Wheeler Hubbell Publishing](https://wheelerhubbell.github.io)
+- Runtime: [`wheelerhubbell/standing-gate@v0`](https://github.com/wheelerhubbell/standing-gate)
+- Client library: `@wheelerhubbell/whp-standing-client`
 
-## Powered By
-- **Engine:** [Wheeler Hubbell Publishing](https://wheelerhubbell.github.io)
-- **GitHub Action:** [`wheelerhubbell/standing-gate@v0`](https://github.com/marketplace/actions/standing-gate)
-- **Client Library:** `@wheelerhubbell/whp-standing-client`
+The Sentinel Template is the repo-level enforcement layer for a single service ecosystem: Decision Integrity Protocol + Standing Mark Service + Unilateral Integrity.
+
