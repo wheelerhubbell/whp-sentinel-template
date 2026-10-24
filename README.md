@@ -61,6 +61,19 @@ Pricing is workload-based and outcome-independent. Payment buys evaluation under
 
 A Standing Mark is issued only when the claim is genuinely established under the protocol. A Standing Assessment is issued when the claim exceeds its authority, evidence, or admissible provenance.
 
+## Archive and Canonical Boundary
+
+The live canonical machine is:
+
+- Wheeler Hubbell Publishing
+- Decision Integrity Protocol
+- Unilateral Integrity
+- Standing Mark Service
+- Standing Gate
+- Standing Mark / Standing Assessment
+
+Anything outside this live machine is archival context, not the current canonical system.
+
 ## Powered By
 
 - Brand: [Wheeler Hubbell Publishing](https://wheelerhubbell.github.io)
