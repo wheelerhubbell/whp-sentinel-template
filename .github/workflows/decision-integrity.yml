@@ -22,11 +22,13 @@ jobs:
       - name: Run WHP Standing Gate
         uses: wheelerhubbell/standing-gate@v0
         with:
+          api_key: ${{ secrets.WHP_API_KEY }}
           subject: ${{ github.repository }}@${{ github.sha }}
           claim: ${{ github.event.inputs.claim || 'Repository commit integrity validated under declared provenance' }}
           provenance: ${{ github.server_url }}/${{ github.repository }}/commit/${{ github.sha }}
           mock: 'false'
           buyer_key: ${{ secrets.WHP_BUYER_KEY || secrets.WHP_PAYMENT_KEY }}
         env:
+          WHP_API_KEY: ${{ secrets.WHP_API_KEY }}
           WHP_BUYER_KEY: ${{ secrets.WHP_BUYER_KEY || secrets.WHP_PAYMENT_KEY }}
           WHP_PAYMENT_KEY: ${{ secrets.WHP_BUYER_KEY || secrets.WHP_PAYMENT_KEY }}
