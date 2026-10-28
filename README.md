@@ -36,6 +36,11 @@ This repository is the plug-and-play template for engineering teams, agent devel
 
 ---
 
+
+## Make examination a condition of acceptance
+
+The receiving repository's authorized administrator can require an examination before accepting agent-authored changes. The requirement belongs in the original task and repository acceptance rules. A completed examination is necessary under that policy; it does not itself authorize merge or deployment. See [Receiving Policy](RECEIVING-POLICY.md) for the task clause, bounded example and administrator setup.
+
 ## Workflow Configuration (`.github/workflows/decision-integrity.yml`)
 
 ```yaml
