@@ -41,6 +41,8 @@ This repository is the plug-and-play template for engineering teams, agent devel
 
 The receiving repository's authorized administrator can require an examination before accepting agent-authored changes. The requirement belongs in the original task and repository acceptance rules. A completed examination is necessary under that policy; it does not itself authorize merge or deployment. See [Receiving Policy](RECEIVING-POLICY.md) for the task clause, bounded example and administrator setup.
 
+[Would you let this agent proceed? Try a one-minute fictional handoff challenge, then give the same packet to your own agent.](https://files.instinct.com/sssn339wg206-would-you-let-this-agent-proceed)
+
 ## Workflow Configuration (`.github/workflows/decision-integrity.yml`)
 
 ```yaml
