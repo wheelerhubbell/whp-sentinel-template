@@ -4,7 +4,7 @@ This repository is the existing GitHub Actions reference consumer for Standing G
 
 ## Service boundary
 
-The current workflow uses Standing Gate's default `POST /v1/evaluate` ordinary-agent front door. The signed front-door evaluation is not a sealed WHP Standing Mark. The sealed, structured Standing purchase is a distinct route, `POST /v1/evaluations`, with its own admitted-authority submission and exact-quote-bound payment contract. Do not infer that this workflow purchases or issues a sealed Mark.
+The workflow uses Standing Gate against the single evaluation door at `POST /v1/evaluate`. It emits an object-bound, Ed25519-signed `WHP-STANDING-MARK-v1` record (`POSITIVE_STANDING_MARK` with outcome `ESTABLISHED`, or `NEGATIVE_STANDING_FINDING` with outcome `NOT_ESTABLISHED`). A workflow's configured allowlist controls client reception; it is not evaluator authorization to deploy, merge, spend, or otherwise execute a consequential action.
 
 Read current terms and fields from the live sources before use:
 
