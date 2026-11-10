@@ -4,7 +4,7 @@
 
 This template is one integration component, not the WHP service by itself. Read it with the governing text, *Decision Integrity: The Continuous Work*, the other three canonical repositories, and the live contract at `https://api.wheelerhubbellpublishing.com/v1/contract`. Treat code/configuration and observed live responses as implementation evidence; a workflow file alone does not prove a complete transaction or issued mark.
 
-The active workflow invokes `wheelerhubbell/standing-gate@v0`; that gate defaults to `/v1/evaluate`. Keep this separate from the sealed WHP Standing purchase and issuance path at `/v1/evaluations`. Do not describe displayed tier prices or direct wallet transfers as prepaid credits or automatic API-key fulfillment unless a verified entitlement path establishes that behavior.
+The active workflow invokes `wheelerhubbell/standing-gate@v0` against the single evaluation door at `POST /v1/evaluate`. Do not describe displayed tier prices or direct wallet transfers as prepaid credits or automatic API-key fulfillment unless a verified entitlement path establishes that behavior.
 
 This repository is the integration layer for the current Wheeler Hubbell Publishing decision-integrity system.
 
