@@ -1,3 +1,5 @@
+> Current integration: [developer onboarding](https://wheelerhubbellpublishing.com/developers.html) and [current SDKs](https://github.com/wheelerhubbell/standing-mark). This page describes a legacy integration. Host links have been corrected, but compatibility with the current payment and record contract is not established.
+
 # WHP Sentinel Template
 
 This repository is the existing GitHub Actions reference consumer for Standing Gate. Its workflow invokes `wheelerhubbell/standing-gate@v0` against the WHP service. It is a client example, not a separate evaluator or proof that a particular workflow run completed a paid examination.
@@ -8,9 +10,9 @@ The workflow uses Standing Gate against the single evaluation door at `POST /v1/
 
 Read current terms and fields from the live sources before use:
 
-- Contract: <https://api.wheelerhubbellpublishing.com/v1/contract>
-- Discovery: <https://api.wheelerhubbellpublishing.com/.well-known/whp-standing.json>
-- Front-door description: <https://api.wheelerhubbellpublishing.com/v1/evaluate>
+- Contract: <https://decisionintegrity.wheelerhubbellpublishing.com/v1/contract>
+- Discovery: <https://decisionintegrity.wheelerhubbellpublishing.com/.well-known/whp-standing.json>
+- Front-door description: <https://decisionintegrity.wheelerhubbellpublishing.com/v1/evaluate>
 - Standing Gate: <https://github.com/wheelerhubbell/standing-gate>
 
 ## Run the existing workflow

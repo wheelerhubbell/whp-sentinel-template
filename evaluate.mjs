@@ -7,7 +7,7 @@
  *  2. Autonomous M2M Micropayment Rail (1 Base USDC via x402 / EIP-3009)
  */
 
-const WHP_URL = process.env.WHP_URL || 'https://api.wheelerhubbellpublishing.com';
+const WHP_URL = process.env.WHP_URL || 'https://decisionintegrity.wheelerhubbellpublishing.com';
 const args = process.argv.slice(2);
 const claimIndex = args.indexOf('--claim');
 const claim = claimIndex !== -1 && args[claimIndex + 1] ? args[claimIndex + 1] : 'Autonomous workflow execution claim';

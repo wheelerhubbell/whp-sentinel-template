@@ -46,9 +46,9 @@ Adding this document or copying the template does not enable branch rules. The r
 
 ## Existing interfaces
 
-- Service contract: https://api.wheelerhubbellpublishing.com/v1/contract
-- Service discovery: https://api.wheelerhubbellpublishing.com/.well-known/whp-standing.json
-- Public verification guidance: https://api.wheelerhubbellpublishing.com/v1/verification
+- Service contract: https://decisionintegrity.wheelerhubbellpublishing.com/v1/contract
+- Service discovery: https://decisionintegrity.wheelerhubbellpublishing.com/.well-known/whp-standing.json
+- Public verification guidance: https://decisionintegrity.wheelerhubbellpublishing.com/v1/verification
 
 Payment buys the examination, never a favorable result. The service does not acquire the receiver's authority by examining the submission.
 
